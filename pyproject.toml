@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "markdown-link-auditor"
+version = "0.1.0"
+description = "Audit relative file links and image paths in Markdown documentation without network access."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+dependencies = []
+
+[project.scripts]
+markdown-link-auditor = "link_auditor.core:main"
+
+[tool.setuptools.packages.find]
+include = ["link_auditor*"]
